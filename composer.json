@@ -1,0 +1,22 @@
+{
+    "name": "chriseduard/sys_mision-sucre",
+    "description": "Sistema de Carga de Notas",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Chriseduard\\SysMisionSucre\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ChrisEduard-a11",
+            "email": "cristianarcaya2003@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "phpmailer/phpmailer": "^6.10",
+        "dompdf/dompdf": "^3.1"
+    }
+}
