@@ -25,6 +25,7 @@ if (!isset($_SESSION['usuario_id'])) {
     <link href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet">
 
+    <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
     <style>
         #weatherWidget .currentDesc { color: #ffffff!important; }
         .traffic-chart { min-height: 335px; }
@@ -58,9 +59,16 @@ if (!isset($_SESSION['usuario_id'])) {
                     <li>
                         <a href="consultar_estudiantes.php"><i class="menu-icon fa fa-users"></i>Consultar Estudiantes</a>
                     </li>
+                    
+                        <li>
+                            <a href="usuarios.php"><i class="menu-icon fa fa-users"></i>Usuarios</a>
+                        </li>
+                    <?php
+                    if ($_SESSION['rol'] == 'administrador') {?>
                     <li>
                         <a href="reportes.php"><i class="menu-icon fa fa-file-text"></i>Reportes</a>
                     </li>
+                    <?php } ?>
                 </ul>
             </div>
         </nav>
@@ -73,7 +81,7 @@ if (!isset($_SESSION['usuario_id'])) {
         <header id="header" class="header">
             <div class="top-left">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="home.php"><img src="../images/logo.png" alt="Logo" style="max-height:40px;"></a>
+                    <a class="navbar-brand" href="home.php"><img src="../images/logo_misionsucre.png" alt="Logo" style="max-height:50px;">SICAN</a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
             </div>
